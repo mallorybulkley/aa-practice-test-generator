@@ -58,12 +58,17 @@ solution = File.open("solution.rb", "w")
 spec << "require 'rspec'" << "\n"
 spec << "require_relative 'practice_test'" << "\n"
 
-# loop through master tests
+# loop through master tests and add text to the new files
 master.each do |test|
   practice_test << File.read(test[2]) << "\n"
   spec << File.read(test[3]) << "\n"
   solution << File.read(test[4]) << "\n"
 end
 
-puts 
+# close the files that were just created
+practice_test.close
+spec.close
+solution.close
+
+puts
 puts "Done!"
