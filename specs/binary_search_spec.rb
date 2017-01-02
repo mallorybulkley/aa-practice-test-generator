@@ -28,7 +28,4 @@ describe "my_bsearch" do
     expect([1, 2, 3, 4, 5, 7].my_bsearch(6)).to eq(nil)
   end
 
-  it "Accepts a comparison block" do
-    expect([1, 2, 3, 4, 5, 7].my_bsearch(6){|a,b| a <=> b*3}).to eq(1)
-  end
 end
