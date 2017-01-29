@@ -12,6 +12,6 @@ describe "real_words_in_string" do
   it "finds words within words" do
     dictionary = ["bears", "ear", "a", "army"]
     words = "erbearsweatmyajs".real_words_in_string(dictionary)
-    expect(words).to eq(["bears", "ear", "a"])
+    expect(words).to match_array(["bears", "ear", "a"])
   end
 end
