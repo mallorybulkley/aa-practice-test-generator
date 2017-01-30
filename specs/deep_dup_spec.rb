@@ -4,7 +4,7 @@ describe "deep_dup" do
   ["capacitors", "resistors", "inductors"]
   ]
 
-  copy = r.deep_dup(robot_parts)
+  copy = deep_dup(robot_parts)
 
   it "makes a copy of the original array" do
     expect(copy).to eq(robot_parts)
