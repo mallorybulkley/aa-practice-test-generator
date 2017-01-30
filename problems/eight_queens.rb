@@ -12,5 +12,3 @@
 def eight_queens_possibilities(current_row, taken_columns, positions)
 
 end
-
-end
