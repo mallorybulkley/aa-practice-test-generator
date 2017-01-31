@@ -1,4 +1,4 @@
-# a/A A01 Practice Test Generator
+# a/A Practice Test Generator
 
 **How to use this generator**
 
