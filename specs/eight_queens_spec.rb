@@ -1,3 +1,5 @@
+require 'yaml'
+
 describe "eight_queens_possibilities" do
   sol = YAML.load_file("./possible_boards.yml").sort
   pos = eight_queens_possibilities(0, [], nil)
