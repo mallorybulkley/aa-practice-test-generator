@@ -1,11 +1,20 @@
 describe "eight_queens_possibilities" do
-  it "Returns an array of the correct_size" do
-    pos = eight_queens_possibilities(0, [], nil)
-    sol = YAML.load_file("./possible_boards.yml").sort
+  sol = YAML.load_file("./possible_boards.yml").sort
+  pos = eight_queens_possibilities(0, [], nil)
 
+  it "calls itself recursively" do
+    expect(self).to receive(:eight_queens_possibilities)
+    eight_queens_possibilities(0, [], nil)
+  end
+
+  it "Returns an array of the correct_size" do
+    expect(pos.length).to eq(sol.length)
+  end
+
+  it "Returns the correct positions" do
     expect(pos.sort).to eq(sol)
   end
 
-  pos = eight_queens_possibilities(0, [], nil)
+  pos
 
 end
