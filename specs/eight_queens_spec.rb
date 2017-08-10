@@ -11,7 +11,4 @@ describe "eight_queens_possibilities" do
   it "Returns the correct positions" do
     expect(pos.sort).to eq(sol)
   end
-
-  pos
-
 end
