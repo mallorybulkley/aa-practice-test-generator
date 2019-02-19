@@ -1,10 +1,13 @@
 class Array
 
   def my_select(&prc)
-    select = []
+    selects = []
 
-    self.my_each{|el| select << el if prc.call(el)}
-    select
+    self.each do |item|
+      selects << item if prc.call(item)
+    end
+
+    selects
   end
 
 end
