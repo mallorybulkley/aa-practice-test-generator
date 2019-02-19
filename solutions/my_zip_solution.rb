@@ -1,15 +1,19 @@
 class Array
 
-  def my_zip(*arrs)
-    result = []
-    (0...size).each do |idx|
-      result << [self[idx]]
-      arrs.each do |arr|
-        result[idx] << arr[idx]
+  def my_zip(*arrays)
+    zipped = []
+
+    self.length.times do |i|
+      subzip = [self[i]]
+
+      arrays.each do |array|
+        subzip << array[i]
       end
+
+      zipped << subzip
     end
 
-    result
+    zipped
   end
 
 end
