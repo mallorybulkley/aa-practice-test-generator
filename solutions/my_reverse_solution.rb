@@ -2,7 +2,11 @@ class Array
 
   def my_reverse
     reversed = []
-    my_each{|el| reversed.unshift(el)}
+    i = length - 1
+    while i >= 0
+      reversed << self[i]
+      i -= 1
+    end
     reversed
   end
 
