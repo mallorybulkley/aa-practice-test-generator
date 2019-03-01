@@ -1,4 +1,5 @@
 Name,Category,ProblemFile,SpecFile,SolutionFile
+anagrams,string,problems/anagrams.rb,specs/anagrams_spec.rb,solutions/anagrams_solution.rb
 base_converter,recursion,problems/base_converter.rb,specs/base_converter_spec.rb,solutions/base_converter_solution.rb
 binary_search,array,problems/binary_search.rb,specs/binary_search_spec.rb,solutions/binary_search_solution.rb
 caesar_cipher,string,problems/caesar_cipher.rb,specs/caesar_cipher_spec.rb,solutions/caesar_cipher_solution.rb
@@ -13,6 +14,7 @@ factors,array,problems/factors.rb,specs/factors_spec.rb,solutions/factors_soluti
 fibs_sum,recursion,problems/fibs_sum.rb,specs/fibs_sum_spec.rb,solutions/fibs_sum_solution.rb
 first_even_numbers_sum,recursion,problems/first_even_numbers_sum.rb,specs/first_even_numbers_sum_spec.rb,solutions/first_even_numbers_sum_solution.rb
 jumble_sort,sort,problems/jumble_sort.rb,specs/jumble_sort_spec.rb,solutions/jumble_sort_solution.rb
+longest_palindrome,string,problems/longest_palindrome.rb,specs/longest_palindrome_spec.rb,solutions/longest_palindrome_solution.rb
 make_better_change,recursion,problems/make_better_change.rb,specs/make_better_change_spec.rb,solutions/make_better_change_solution.rb
 median,array,problems/median.rb,specs/median_spec.rb,solutions/median_solution.rb
 merge_sort,sort,problems/merge_sort.rb,specs/merge_sort_spec.rb,solutions/merge_sort_solution.rb

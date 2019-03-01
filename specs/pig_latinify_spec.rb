@@ -1,4 +1,4 @@
-describe "#pig_latinify" do
+require_relKdescribe "#pig_latinify" do
   it "translates a word beginning with a vowel" do
     s = pig_latinify("apple")
     expect(s).to eq("appleay")
@@ -21,11 +21,6 @@ describe "#pig_latinify" do
 
   it "translates a word beginning with three consonants" do
     expect(pig_latinify("three")).to eq("eethray")
-  end
-
-  it "counts 'sch' as a single phoneme" do
-    s = pig_latinify("school")
-    expect(s).to eq("oolschay")
   end
 
   it "counts 'qu' as a single phoneme" do

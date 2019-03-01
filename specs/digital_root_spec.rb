@@ -8,7 +8,7 @@ describe "#digital_root" do
   end
 
   it "does not call #to_s on the argument" do
-    expect_any_instance_of(Fixnum).to_not receive(:to_s)
+    expect_any_instance_of(Integer).to_not receive(:to_s)
     digital_root(4322)
   end
 end
