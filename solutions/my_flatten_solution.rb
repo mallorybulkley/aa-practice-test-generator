@@ -1,5 +1,14 @@
 class Array
 
+  def my_each(&prc)
+    i = 0
+    while i < self.length
+      prc.call(self[i])
+      i+=1
+    end
+    self
+  end
+
   def my_flatten
     flattened = []
     self.my_each do |el|
@@ -8,13 +17,13 @@ class Array
     flattened
   end
 
-  def my_controlled_flatten(n)
-    return self if n < 1
+  def my_controlled_flatten(level = nil)
+    return self if level < 1
     result = []
 
     each do |el|
       if el.is_a?(Array)
-        result += el.my_controlled_flatten(n-1)
+        result += el.my_controlled_flatten(level-1)
       else
         result << el
       end

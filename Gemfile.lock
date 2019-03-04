@@ -27,4 +27,8 @@ DEPENDENCIES
   rspec
 
 BUNDLED WITH
+<<<<<<< HEAD
    1.17.2
+=======
+   1.17.1
+>>>>>>> michaels-questions

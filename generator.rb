@@ -3,7 +3,7 @@ require 'colorize'
 
 # Instructions
 system("clear")
-puts "Welcome to Mallory's a/A Practice Assessment Generator".cyan
+puts "Welcome to a/A's Practice Assessment Generator".cyan
 puts "This generator will create a practice test based on your input. " \
       "You can choose how many problems from each category to include in your test. "
 puts "This program will generate 3 files in this folder: practice_test, spec, and solution. " \
