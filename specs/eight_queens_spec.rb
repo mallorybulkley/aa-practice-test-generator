@@ -1,14 +1,12 @@
-require 'yaml'
+describe "eight_queens" do
+  eight_queens = EightQueens.new()
 
-describe "eight_queens_possibilities" do
-  sol = YAML.load_file("./possible_boards.yml").sort
-  pos = eight_queens_possibilities(0, [], nil)
-
-  it "Returns an array of the correct_size" do
-    expect(pos.length).to eq(sol.length)
+  it "returns the correct number" do
+    expect(eight_queens.backtrack).to eq(92)
   end
 
-  it "Returns the correct positions" do
-    expect(pos.sort).to eq(sol)
+  it "calls itself recursively" do
+    expect(eight_queens).to receive(:backtrack).exactly(1965).times.and_call_original
+    eight_queens.backtrack
   end
 end

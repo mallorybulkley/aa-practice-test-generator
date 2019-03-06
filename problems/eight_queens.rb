@@ -1,14 +1,29 @@
-# CHALLENGE: Eight queens puzzle precursor
-#
-# Write a recursive method that generates all 8! possible unique ways to
+# Write a recursive method that generates the number of possible unique ways to
 # place eight queens on a chess board such that no two queens are in
-# the same board row or column (the same diagonal is OK).
-#
-# Each of the 8! elements in the return array should be an array of positions:
-# E.g. [[0,0], [1,1], [2,2], [3,3], [4,4], [5,5], [6,6], [7,7]]
-#
-# My solution used 3 method parameters: current_row, taken_columns, and
-# positions so far
-def eight_queens_possibilities(current_row, taken_columns, positions)
+# the row, column, or diagonal. A skeleton for a possible solution is 
+# provided. Feel free to create your own solution from scratch.
 
+class EightQueens
+  attr_accessor :rows, :diags1, :diags2
+
+  def initialize
+    @rows = Array.new(8, false)
+    @diags1 = Array.new(14, false)
+    @diags2 = Array.new(14, false)
+  end
+
+  def backtrack(row = 0, count = 0)
+  end
+
+  def is_not_under_attack(row, col)
+  end
+
+  def place_queen(row, col)
+  end
+
+  def remove_queen(row, col)
+  end
 end
+
+eight_queens = EightQueens.new()
+eight_queens.backtrack

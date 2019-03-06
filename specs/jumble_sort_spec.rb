@@ -16,4 +16,12 @@ describe "#jumble_sort" do
     reverse = ("a".."z").to_a.reverse
     expect(jumble_sort("hello", reverse)).to eq("ollhe")
   end
+
+  it "works with an empty string" do
+    expect(jumble_sort("")).to eq("")
+  end
+
+  it "works with a string of one item" do
+    expect(jumble_sort("g")).to eq("g")
+  end
 end
