@@ -1,7 +1,7 @@
 describe "my_reverse" do
-  a = [ "a", "b", "c", "d" ]
+  let(:array) { [ "a", "b", "c", "d" ] }
 
   it "Reverses an array" do
-    expect(a.my_reverse).to eq(a.reverse)
+    expect(array.my_reverse).to eq(array.reverse)
   end
 end

@@ -11,4 +11,8 @@ describe "#symmetric_substrings" do
   it "handles nested substrings" do
     expect("xabax".symmetric_substrings).to match_array(["aba", "xabax"])
   end
+
+  it "handles no symmetrical substrings" do
+    expect("abcd".symmetric_substrings).to match_array([])
+  end
 end

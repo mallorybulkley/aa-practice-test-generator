@@ -1,18 +1,20 @@
 class Array
 
   def my_each(&prc)
-    (0...size).each do |i|
+    i = 0
+    while i < self.length
       prc.call(self[i])
+      i+=1
     end
-
     self
   end
 
   def my_each_with_index(&prc)
-    (0...size).each do |idx|
-      prc.call(self[idx], idx)
+    i = 0
+    while i < self.length
+      prc.call(self[i], i)
+      i+=1
     end
-
     self
   end
 end

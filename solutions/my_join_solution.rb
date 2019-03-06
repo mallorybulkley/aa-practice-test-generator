@@ -1,13 +1,13 @@
 class Array
 
-  def my_join(str = "")
-    res = ""
-    my_each_with_index do |el, i|
-      res << el.to_s
-      res << str unless i == size - 1
+  def my_join(separator = "")
+    joined_str = ""
+    each_with_index do |el, i|
+      joined_str << el.to_s
+      joined_str << separator unless i == length - 1 
     end
 
-    res
+    joined_str
   end
 
 end

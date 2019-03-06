@@ -14,7 +14,7 @@ def translate_word(word)
     until vowels.include?(word[phoneme_end])
       phoneme_end += 1
     end
-    phoneme_end += 1 if word[phoneme_end - 1] == "q"
+    phoneme_end += 1 if word[phoneme_end - 1] == "q" && word[phoneme_end] == "u"
     "#{word[phoneme_end..-1]}#{word[0...phoneme_end]}ay"
   end
 end

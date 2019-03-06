@@ -19,15 +19,20 @@ def digital_root_step(num)
 end
 
 # Alternate Solution
-# def digital_root(num)
-#   digits = []
-#
-#   while num > 0
-#     digits << num % 10
-#     num /= 10
-#   end
-# 
-#   digit_sum = digits.inject(&:+)
-#
-#   digit_sum > 10 ? digital_root(digit_sum) : digit_sum
-# end
+def digital_root(num)
+  digits = []
+
+  while num > 0
+    digits << num % 10
+    num /= 10
+  end
+
+  digit_sum = digits.inject(&:+)
+
+  digit_sum > 10 ? digital_root(digit_sum) : digit_sum
+end
+
+# Magical one-line solution
+def digital_root(num)
+  num < 10 ? num : digital_root(digital_root(num / 10) + (num % 10))
+end

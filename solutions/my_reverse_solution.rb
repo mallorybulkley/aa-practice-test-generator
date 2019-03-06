@@ -2,7 +2,11 @@ class Array
 
   def my_reverse
     reversed = []
-    my_each{|el| reversed.unshift(el)}
+
+    self.each do |el|
+      reversed.unshift(el)
+    end
+
     reversed
   end
 

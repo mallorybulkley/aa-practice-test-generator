@@ -1,6 +1,6 @@
 class Array
 
-  def my_rotate(num)
+  def my_rotate(positions)
 
   end
 

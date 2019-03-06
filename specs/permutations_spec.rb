@@ -1,5 +1,9 @@
 describe "#permutations" do
+  let(:arr) { [1, 2, 3] }
+
   it "returns all permutations of an array" do
-    expect(permutations([1, 2, 3])).to match_array([[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]])
+    perms_arr = arr.permutation.to_a
+    
+    expect(permutations(arr)).to match_array(perms_arr)
   end
 end

@@ -1,13 +1,13 @@
 class Hash
 
-  def my_merge(hash2)
-    self_dup = dup
+  def my_merge(other_hash)
+    duped_hash = self.dup
 
-    hash2.each do |k, v|
-      self_dup[k] = v
+    other_hash.each do |k, v|
+      duped_hash[k] = v
     end
 
-    self_dup
+    duped_hash
   end
 
 end
