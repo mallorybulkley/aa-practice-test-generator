@@ -1,13 +1,8 @@
 Name,Category,ProblemFile,SpecFile,SolutionFile
-<<<<<<< HEAD:resources/list.csv
-base_converter,recursion,problems/base_converter.rb,specs/base_converter_spec.rb,solutions/base_converter_solution.rb
-binary_search,sort,problems/binary_search.rb,specs/binary_search_spec.rb,solutions/binary_search_solution.rb
-=======
 anagrams,string,problems/anagrams.rb,specs/anagrams_spec.rb,solutions/anagrams_solution.rb
 base_converter,bonus,problems/base_converter.rb,specs/base_converter_spec.rb,solutions/base_converter_solution.rb
 binary_search,sort,problems/binary_search.rb,specs/binary_search_spec.rb,solutions/binary_search_solution.rb
 bubble_sort,sort,problems/bubble_sort.rb,specs/bubble_sort_spec.rb,solutions/bubble_sort_solution.rb
->>>>>>> 621d6b4d1fcf3ea47433e8a89429930b36417e69:list.csv
 caesar_cipher,string,problems/caesar_cipher.rb,specs/caesar_cipher_spec.rb,solutions/caesar_cipher_solution.rb
 deep_dup,recursion,problems/deep_dup.rb,specs/deep_dup_spec.rb,solutions/deep_dup_solution.rb
 digital_root,recursion,problems/digital_root.rb,specs/digital_root_spec.rb,solutions/digital_root_solution.rb
