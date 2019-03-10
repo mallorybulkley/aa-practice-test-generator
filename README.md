@@ -15,6 +15,8 @@ This is a practice test generator to prepare for A01, your first assessment at A
 
 4. Check your solutions against those in `solution.rb`.
 
+**Note**: Do not modify anything in the `problems`, `solutions`, or `specs` directories - the files in these directories are used to generate practice assessments. Instead, run one of the generators listed below and work on problems in the test directory created by the generator.
+
 ## Generators
 
 All of the practice problems are listed and categorized in `list.csv`. Categories include: recursion, sorting, enumerable, array, string, and bonus. Bonus problems will not appear on the assessment but are good to practice and can help you gain a deeper understanding of some of the more complex problems, especially with regards to recursion. There are two different generators included in this repo - they are detailed below.
