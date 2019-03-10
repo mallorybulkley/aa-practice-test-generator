@@ -25,12 +25,6 @@ All of the practice problems are listed and categorized in `list.csv`. Categorie
 
 Generates a random practice assessment including problems across all categories (except for bonus). Test files will be generated inside of a directory called `practice_assessment`.
 
-- `practice_test.rb` contains the problems to be solved
-
-- `spec.rb` combines the specs for the chosen problems into one file for easy testing
-
-- `solutions.rb` combines the solutions for each problem
-
 ### Problems by Category Generator
 
 **Command**: `ruby category_generator.rb` (must follow prompt after)
@@ -39,12 +33,14 @@ Prompts you for your desired number of questions from each category, and uses yo
 
 The most problems in any category is 12, so if you would like to generate a file with all of the problems, you can put 12 for each category (duplicates will not be created if there are less than 12 problems in a category).
 
+---
+
 For both generators, 3 files will be created inside the generated folder as follows:
 
 - `practice_test.rb` contains the problems to be solved
 
 - `spec.rb` combines the specs for the chosen problems into one file for easy testing
 
-- `solutions.rb` combines the solutions for each problem
+- `solution.rb` combines the solutions for each problem
 
 **Warning**: If you run the generator again, it will re-write the previously generated files and erase your previous work. If you wish to save your previous work, you will need to rename the files. This applies to both generators.
