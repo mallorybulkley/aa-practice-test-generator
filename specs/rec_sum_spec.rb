@@ -1,4 +1,3 @@
-require 'rec_sum_solution'
 describe "#rec_sum" do
   it "returns the sum of all elements in an array" do
     arr = [1,2,3,4]
