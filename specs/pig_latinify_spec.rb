@@ -1,4 +1,4 @@
-require_relKdescribe "#pig_latinify" do
+describe "#pig_latinify" do
   it "translates a word beginning with a vowel" do
     s = pig_latinify("apple")
     expect(s).to eq("appleay")
