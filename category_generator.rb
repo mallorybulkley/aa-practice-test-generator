@@ -1,5 +1,6 @@
 require 'csv'
 require 'colorize'
+require 'fileutils'
 
 # Instructions
 system("clear")
@@ -50,9 +51,11 @@ categories.each do |category|
 end
 
 # create new test, spec and solution files
-practice_test = File.open("practice_test.rb", "w")
-spec = File.open("spec.rb", "w")
-solution = File.open("solution.rb", "w")
+FileUtils.rm_r("category_assessment") if File.directory?("category_assessment")
+Dir.mkdir("category_assessment")
+practice_test = File.open("category_assessment/practice_test.rb", "w")
+spec = File.open("category_assessment/spec.rb", "w")
+solution = File.open("category_assessment/solution.rb", "w")
 
 # require rspec and the practice_test in the spec
 spec << "require 'rspec'" << "\n"
