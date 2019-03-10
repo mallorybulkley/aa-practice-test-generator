@@ -1,0 +1,5 @@
+# Ignore generated test files
+practice_test.rb
+solution.rb
+spec.rb
+practice_assessment/
