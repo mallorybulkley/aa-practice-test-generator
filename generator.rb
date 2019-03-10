@@ -12,7 +12,7 @@ puts "This program will generate 3 files in this folder: practice_test, spec, an
 puts "Good luck!"
 
 # read in csv with test info
-tests = CSV.read('list.csv', headers: true, header_converters: :symbol, converters: :all)
+tests = CSV.read('resources/list.csv', headers: true, header_converters: :symbol, converters: :all)
 
 # list possible categories
 categories = Array.new
