@@ -1,5 +1,6 @@
 # Ignore generated test files
+practice_assessment/
+category_assessment/
 practice_test.rb
 solution.rb
 spec.rb
-practice_assessment/
