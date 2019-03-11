@@ -31,6 +31,10 @@ puts "If you would like ALL problems from ALL categories, input: " + "all".yello
 puts "If you'd like all problems, EXCEPT bonus problems, input: " + "all, except: bonus".yellow
 input = gets.chomp.split(", ")
 
+system("clear")
+puts "I am generating a practice assessment that will be saved"
+puts "as 'practice_assessment/' in your current directory"
+
 if input == ["all"]
   input = categories.map { |cat| cat += ": 20" }
 end
@@ -84,5 +88,6 @@ practice_test.close
 spec.close
 solution.close
 
-puts
+sleep(0.5)
+puts 
 puts "Done!"
