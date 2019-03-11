@@ -19,7 +19,7 @@ def permutations(array)
   # and for each permutation add first into every index. This new subarray
   # gets added to total_permutations.
   perms.my_each do |perm|
-    (0..perm.length).my_each do |i|
+    (0..perm.length).to_a.my_each do |i|
       total_permutations << perm[0...i] + [first] + perm[i..-1]
     end
   end

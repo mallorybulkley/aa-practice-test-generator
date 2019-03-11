@@ -12,7 +12,7 @@ def jumble_sort(str, alphabet = nil)
   sorted = false
   until sorted
     sorted = true
-    (0...str.length - 1).my_each do |i|
+    (0...str.length - 1).to_a.my_each do |i|
       if alphabet.index(str[i]) > alphabet.index(str[i + 1])
         str[i], str[i + 1] = str[i + 1], str[i]
         sorted = false
