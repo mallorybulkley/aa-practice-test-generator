@@ -27,7 +27,12 @@ puts
 # get user request
 puts "Input your requests, separated by commas and spaces please"
 puts "Example input: " + "array: 2, recursion: 1, sort: 1".yellow
+puts "If you would like ALL problems from ALL categories, input: " + "all".yellow
 input = gets.chomp.split(", ")
+
+if input == ["all"]
+  input = categories.map { |cat| cat += ": 20" }
+end
 
 categoryrequests = Hash.new(0)
 input.each do |request|
