@@ -28,10 +28,16 @@ puts
 puts "Input your requests, separated by commas and spaces please"
 puts "Example input: " + "array: 2, recursion: 1, sort: 1".yellow
 puts "If you would like ALL problems from ALL categories, input: " + "all".yellow
+puts "If you'd like all problems, EXCEPT bonus problems, input: " + "all, except: bonus".yellow
 input = gets.chomp.split(", ")
 
 if input == ["all"]
   input = categories.map { |cat| cat += ": 20" }
+end
+
+if input == ["all", "except: bonus"]
+  no_bonus_categories = categories.reject {|cat| cat == "bonus"}
+  input = no_bonus_categories.map { |cat| cat += ": 20" }
 end
 
 categoryrequests = Hash.new(0)
