@@ -7,5 +7,3 @@ gem 'rspec'
 gem 'byebug'
 
 gem 'colorize'
-
-# gem "rails"

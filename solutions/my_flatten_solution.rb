@@ -21,7 +21,7 @@ class Array
     return self if level < 1
     result = []
 
-    each do |el|
+    self.my_each do |el|
       if el.is_a?(Array)
         result += el.my_controlled_flatten(level-1)
       else

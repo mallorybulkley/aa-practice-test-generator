@@ -2,7 +2,7 @@ def caesar_cipher(str, shift)
   letters = ("a".."z").to_a
 
   encoded_str = ""
-  str.each_char do |char|
+  str.split('').my_each do |char|
     if char == " "
       encoded_str << " "
       next

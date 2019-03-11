@@ -8,13 +8,16 @@ LITTLE_WORDS = [
 
 def titleize(title)
   words = title.split(" ")
-  words.map!.with_index do |word, idx|
+  result_words = []
+  idx = 0
+  words.my_each do |word|
     if idx > 0 && LITTLE_WORDS.include?(word)
-      word.downcase
+      result_words << word.downcase
     else
-      word.capitalize
+      result_words << word.capitalize
     end
+    idx += 1
   end
 
-  words.join(" ")
+  result_words.join(" ")
 end

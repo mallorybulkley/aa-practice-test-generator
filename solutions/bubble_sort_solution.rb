@@ -5,7 +5,7 @@ class Array
     until sorted
       sorted = true
 
-      each_index do |i|
+      self.my_each_with_index do |el, i|
         next if i + 1 == self.length
         j = i + 1
         if self[i] > self[j]
@@ -26,7 +26,7 @@ class Array
     until sorted
       sorted = true
 
-      each_index do |i|
+      self.my_each_with_index do |el, i|
         next if i + 1 == self.length
         j = i + 1
         if prc.call(self[i], self[j]) == 1

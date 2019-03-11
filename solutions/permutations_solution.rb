@@ -18,8 +18,8 @@ def permutations(array)
   # Now we iterate over the result of our recusive call say [[1, 2], [2, 1]]
   # and for each permutation add first into every index. This new subarray
   # gets added to total_permutations.
-  perms.each do |perm|
-    (0..perm.length).each do |i|
+  perms.my_each do |perm|
+    (0..perm.length).my_each do |i|
       total_permutations << perm[0...i] + [first] + perm[i..-1]
     end
   end

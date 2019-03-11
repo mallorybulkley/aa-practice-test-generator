@@ -3,6 +3,14 @@ describe "#bubble_sort" do
   # array it is called on, but creates a new sorted array.
   let(:array) { [1, 2, 3, 4, 5].shuffle }
 
+  it 'does NOT use ruby built-in methods' do
+    expect(array).not_to receive(:each)
+    expect(array).not_to receive(:each_with_index)
+    expect(array).not_to receive(:map)
+    expect(array).not_to receive(:map!)
+    array.bubble_sort!
+  end
+
   it "works with an empty array" do
     expect([].bubble_sort).to eq([])
   end

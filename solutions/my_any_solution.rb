@@ -10,7 +10,7 @@ class Array
   end
 
   def my_any?(&prc)
-    my_each{|el| return true if prc.call(el)}
+    self.my_each{|el| return true if prc.call(el)}
     false
   end
 

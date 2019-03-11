@@ -4,7 +4,7 @@ class Array
     i = 0
     while i < self.length
       prc.call(self[i])
-      i+=1
+      i += 1
     end
     self
   end
@@ -13,7 +13,7 @@ class Array
     i = 0
     while i < self.length
       prc.call(self[i], i)
-      i+=1
+      i += 1
     end
     self
   end

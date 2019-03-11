@@ -3,7 +3,7 @@ class Array
   def my_select(&prc)
     selects = []
 
-    self.each do |item|
+    self.my_each do |item|
       selects << item if prc.call(item)
     end
 
