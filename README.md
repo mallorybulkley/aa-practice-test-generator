@@ -8,7 +8,7 @@ This is a practice test generator to prepare for A01, your first assessment at A
 
 2. Navigate to your local repo directory in terminal and run one of the following generators (detailed in below section):
 
-   - `ruby random_test_generator.rb` - Generates a practice test in a folder called `practice_assessment`
+   - `ruby practice_test_generator.rb` - Generates a practice test in a folder called `practice_assessment`
    - `ruby category_generator.rb` - Generates a test by category, based on how many problems of each category you want in a folder called `category_assessment` (requires following a prompt)
 
 3. Navigate to the directory that was generated from running one of the above commands. Run `bundle exec rspec spec.rb` to test your answers against the spec as you work through `practice_test.rb`.
@@ -23,7 +23,7 @@ All of the practice problems are listed and categorized in `list.csv`. Categorie
 
 ### Practice Assessment Generator
 
-**Command**: `ruby random_test_generator.rb`
+**Command**: `ruby practice_test_generator.rb`
 
 Generates a random practice assessment including problems across all categories (except for bonus). Test files will be generated inside of a directory called `practice_assessment`.
 
