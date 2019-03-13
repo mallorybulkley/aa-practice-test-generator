@@ -33,7 +33,9 @@ Generates a random practice assessment including problems across all categories 
 
 Prompts you for your desired number of questions from each category, and uses your input and the CSV file to generate a test of randomly selected practice problems from each category specified. Test files will be generated inside of a directory called `category_assessment`.
 
-The most problems in any category is 12, so if you would like to generate a file with all of the problems, you can put 12 for each category (duplicates will not be created if there are less than 12 problems in a category).
+**Generate assessment with all problems** - Input `all` when prompted
+
+**Generate assessment with all problems, except bonus** - Input `all, except: bonus` when prompted
 
 ---
 
