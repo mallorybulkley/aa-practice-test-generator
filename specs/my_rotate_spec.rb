@@ -1,5 +1,11 @@
 describe "my_rotate" do
-  arr = [ "a", "b", "c", "d" ]
+  let(:arr) {[ "a", "b", "c", "d" ]}
+
+  it 'should NOT use built-in ruby #rotate method' do
+    expect(arr).not_to receive(:rotate)
+    expect(arr).not_to receive(:rotate!)
+    arr.rotate(2)
+  end
 
   it "Rotates the elements 1 position if no argument is passed in" do
     expect(arr.my_rotate).to eq(["b", "c", "d", "a"])

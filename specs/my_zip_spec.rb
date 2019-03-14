@@ -2,6 +2,11 @@ describe "my_zip" do
   let(:arr1) { [ 4, 5, 6 ] }
   let(:arr2) { [ 7, 8, 9 ] }
 
+  it 'should NOT use built-in ruby #zip method' do
+    expect(hash1).not_to receive(:zip)
+    arr1.zip(arr2)
+  end 
+
   it 'Zips arrays of the same size' do
     expect([1, 2, 3].my_zip(arr1, arr2)).to eq([[1, 4, 7], [2, 5, 8], [3, 6, 9]])
   end

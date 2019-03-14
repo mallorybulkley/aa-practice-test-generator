@@ -1,11 +1,9 @@
 describe "my_flatten" do
 
-  it "should use #my_each, NOT built-in ruby method" do
+  it "should NOT use built-in ruby #flatten method" do
     arr = [1, 2, 3, [4, [5, 6]], [[[7]], 8]]
-    expect(arr).to receive(:my_each).and_call_original
-    expect(arr).not_to receive(:each)
-    expect(arr).not_to receive(:map)
-    expect(arr).not_to receive(:map!)
+    expect(arr).not_to receive(:flatten)
+    expect(arr).not_to receive(:flatten!)
     arr.my_flatten
   end
 
@@ -16,12 +14,10 @@ end
 
 describe "my_controlled_flatten" do
 
-  it "should use #my_each, NOT built-in ruby method" do
+  it "should NOT use built-in ruby #flatten method" do
     arr = [1,[2,3], [4,[5]], [[6,[7]]]]
-    expect(arr).to receive(:my_each).and_call_original
-    expect(arr).not_to receive(:each)
-    expect(arr).not_to receive(:map)
-    expect(arr).not_to receive(:map!)
+    expect(arr).not_to receive(:flatten)
+    expect(arr).not_to receive(:flatten!)
     arr.my_controlled_flatten(1)
   end
 
