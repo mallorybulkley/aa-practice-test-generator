@@ -1,7 +1,7 @@
 describe "my_join" do
   let(:array) { [ "a", "b", "c", "d" ] }
 
-  it "should use #my_each, NOT built-in ruby method" do
+  it "should NOT use built-in ruby #flatten method" do
     expect(array).not_to receive(:join)
     array.my_join
   end
