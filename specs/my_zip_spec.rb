@@ -3,7 +3,7 @@ describe "my_zip" do
   let(:arr2) { [ 7, 8, 9 ] }
 
   it 'should NOT use built-in ruby #zip method' do
-    expect(hash1).not_to receive(:zip)
+    expect(arr1).not_to receive(:zip)
     arr1.zip(arr2)
   end 
 

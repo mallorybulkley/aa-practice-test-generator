@@ -13,7 +13,7 @@ describe "my_merge" do
       expect(hash1.my_merge(hash2)).to eq(hash1.merge(hash2))
   end
 
-  it "Priortizes values from the hash being merged in" do
-      expect(hash1.my_merge(hash3)).to eq(hash1.merge(arr3))
+  it "Prioritizes values from the hash being merged in" do
+      expect(hash1.my_merge(hash3)).to eq(hash1.merge(hash3))
   end
 end
