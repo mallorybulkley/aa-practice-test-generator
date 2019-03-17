@@ -4,7 +4,7 @@ describe "my_zip" do
 
   it 'should NOT use built-in ruby #zip method' do
     expect(arr1).not_to receive(:zip)
-    arr1.zip(arr2)
+    arr1.my_zip(arr2)
   end 
 
   it 'Zips arrays of the same size' do
