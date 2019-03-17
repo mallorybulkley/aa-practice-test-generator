@@ -5,7 +5,7 @@ class Array
     self.length.times do |i|
       subzip = [self[i]]
 
-      arrays.my_each do |array|
+      arrays.each do |array|
         subzip << array[i]
       end
 

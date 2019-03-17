@@ -16,7 +16,7 @@ def make_better_change(value, coins)
 
   change = []
   coins = coins.sort.reverse.select{|coin| coin <= value}
-  coins.my_each do |coin|
+  coins.each do |coin|
     remainder = value - coin
     if remainder > 0
       best_remainder = make_better_change(remainder, coins)

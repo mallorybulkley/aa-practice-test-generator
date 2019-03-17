@@ -10,7 +10,7 @@ def titleize(title)
   words = title.split(" ")
   result_words = []
   idx = 0
-  words.my_each do |word|
+  words.each do |word|
     if idx > 0 && LITTLE_WORDS.include?(word)
       result_words << word.downcase
     else
