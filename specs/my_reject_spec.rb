@@ -2,11 +2,9 @@ describe 'my_reject' do
 
   let(:arr) { [1, 2, 3] }
 
-  it "should use #my_each, NOT built-in ruby method" do
-    expect(arr).to receive(:my_each).and_call_original
-    expect(arr).not_to receive(:each)
-    expect(arr).not_to receive(:map)
-    expect(arr).not_to receive(:map!)
+  it "should NOT use built-in #reject method" do
+    expect(arr).not_to receive(:reject)
+    expect(arr).not_to receive(:reject!)
     arr.my_reject { |num| num > 1 }
   end
 
