@@ -1,11 +1,8 @@
 describe 'Array#my_inject' do
-
-  it "should use #my_each, NOT built-in ruby method" do
+  it "should NOT use built-in #inject or #reduce methods" do
     arr = [1, 2, 3]
-    expect(arr).to receive(:my_each).and_call_original
-    expect(arr).not_to receive(:each)
-    expect(arr).not_to receive(:map)
-    expect(arr).not_to receive(:map!)
+    expect(arr).not_to receive(:inject)
+    expect(arr).not_to receive(:reduce)
     arr.my_inject(1) { |acc, x| acc + x }
   end
 
@@ -25,13 +22,6 @@ describe 'Array#my_inject' do
     expect do |block|
       [1, 2, 3].my_inject(100, &block)
     end.to yield_successive_args([100, 1], [nil, 2], [nil, 3])
-  end
-
-  it 'does NOT call the built in Array#inject or Array#reduce method' do
-    original_array = ["original array"]
-    expect(original_array).not_to receive(:inject)
-    expect(original_array).not_to receive(:reduce)
-    original_array.my_inject {}
   end
 
   it 'with accumulator, it correctly injects and returns answer' do

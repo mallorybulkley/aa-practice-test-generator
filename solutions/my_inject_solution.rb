@@ -7,7 +7,7 @@ class Array
       arr = self.drop(1)
     end
 
-    arr.my_each do |el|
+    arr.each do |el|
       accumulator = block.call(accumulator, el)
     end
 
