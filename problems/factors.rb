@@ -1,5 +1,4 @@
-# Write a method that finds the factors of a 
-# number in ascending order recursively.
+# Write a method that returns the factors of a number in ascending order.
 
 def factors(num)
 
