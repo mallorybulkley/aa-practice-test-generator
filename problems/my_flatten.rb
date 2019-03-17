@@ -1,5 +1,4 @@
 class Array
-
   # Takes a multi-dimentional array and returns a single array of all the elements
   # [1,[2,3], [4,[5]]].my_controlled_flatten(1) => [1,2,3,4,5]
   def my_flatten

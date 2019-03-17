@@ -5,9 +5,7 @@
   # [1,2,3].my_join('$') => '1$2$3'
 
 class Array
-
   def my_join(separator = "")
 
   end
-
 end

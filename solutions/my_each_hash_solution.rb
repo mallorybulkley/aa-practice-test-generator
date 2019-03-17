@@ -1,5 +1,4 @@
 class Hash
-
   def my_each(&prc)
     k = 0
     while k < keys.length
@@ -7,5 +6,4 @@ class Hash
       k += 1
     end
   end
-
 end

@@ -1,5 +1,4 @@
 class Array
-
   def my_each(&prc)
     i = 0
     while i < self.length
@@ -31,5 +30,4 @@ class Array
 
     result
   end
-
 end

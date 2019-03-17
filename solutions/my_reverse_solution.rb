@@ -1,5 +1,4 @@
 class Array
-
   def my_reverse
     reversed = []
 
@@ -9,5 +8,4 @@ class Array
 
     reversed
   end
-
 end

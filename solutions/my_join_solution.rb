@@ -1,5 +1,4 @@
 class Array
-
   def my_join(separator = "")
     joined_str = ""
     i = 0
@@ -11,5 +10,4 @@ class Array
 
     joined_str
   end
-
 end

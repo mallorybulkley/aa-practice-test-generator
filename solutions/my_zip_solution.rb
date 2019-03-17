@@ -1,5 +1,4 @@
 class Array
-
   def my_zip(*arrays)
     zipped = []
 
@@ -15,5 +14,4 @@ class Array
 
     zipped
   end
-
 end

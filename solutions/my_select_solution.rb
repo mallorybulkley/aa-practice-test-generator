@@ -1,5 +1,4 @@
 class Array
-
   def my_select(&prc)
     selects = []
 
@@ -9,5 +8,4 @@ class Array
 
     selects
   end
-
 end
