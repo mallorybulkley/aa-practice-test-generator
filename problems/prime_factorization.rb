@@ -5,7 +5,3 @@
 def prime_factorization(num)
 
 end
-
-def is_prime?(num)
-
-end

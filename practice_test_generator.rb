@@ -64,16 +64,26 @@ end
 # Create new test, spec and solution files
 FileUtils.rm_r("practice_assessment") if File.directory?("practice_assessment")
 Dir.mkdir("practice_assessment")
-practice_test = File.open("practice_assessment/practice_test.rb", "w")
-spec = File.open("practice_assessment/spec.rb", "w")
-solution = File.open("practice_assessment/solution.rb", "w")
+Dir.mkdir("practice_assessment/lib")
+Dir.mkdir("practice_assessment/spec")
+Dir.mkdir("practice_assessment/solution")
+practice_test = File.open("practice_assessment/lib/practice_test.rb", "w")
+spec = File.open("practice_assessment/spec/spec.rb", "w")
+solution = File.open("practice_assessment/solution/solution.rb", "w")
+gemfile = File.open("practice_assessment/Gemfile", "w")
 
-# Copy README into preactice directory
+# Copy README into practice directory
 FileUtils.cp("./resources/README.md", "./practice_assessment/")
 
 # Require rspec and the practice_test in the spec
 spec << "require 'rspec'" << "\n"
 spec << "require_relative 'practice_test'" << "\n"
+
+# Add rspec, byebug, and colorize gems to Gemfile
+gemfile << "source 'https://rubygems.org'" << "\n"
+gemfile << "gem 'rspec'" << "\n"
+gemfile << "gem 'byebug'" << "\n"
+gemfile << "gem 'colorize'" << "\n"
 
 # Loop through master tests and add text to the new files
 master.each do |test|
@@ -86,6 +96,7 @@ end
 practice_test.close
 spec.close
 solution.close
+gemfile.close
 
 puts "Beep." 
 puts "Bop."
