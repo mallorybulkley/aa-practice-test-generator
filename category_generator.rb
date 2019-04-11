@@ -33,7 +33,7 @@ input = gets.chomp.split(", ")
 
 system("clear")
 puts "I am generating a practice assessment that will be saved"
-puts "as 'practice_assessment/' in your current directory"
+puts "as 'category_assessment/' in your current directory"
 
 if input == ["all"]
   input = categories.map { |cat| cat += ": 20" }
