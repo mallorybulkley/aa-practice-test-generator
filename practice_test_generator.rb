@@ -77,7 +77,7 @@ rspec = File.open("practice_assessment/.rspec", "w")
 FileUtils.cp("./resources/README.md", "./practice_assessment/")
 
 # Require rspec and the practice_test in the spec
-spec << "gem 'rspec', '~> 3.1.0'" << "\n"
+spec << "gem 'rspec'" << "\n"
 spec << "require 'practice_test'" << "\n"
 
 # .rspec file add formatting and color for better readability.
