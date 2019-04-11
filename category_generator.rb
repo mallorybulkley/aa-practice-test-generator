@@ -65,16 +65,31 @@ categories.each do |category|
   master = master.concat(problems_in_category.sample(n))
 end
 
-# create new test, spec and solution files
+# Create new test, spec and solution files
 FileUtils.rm_r("category_assessment") if File.directory?("category_assessment")
 Dir.mkdir("category_assessment")
-practice_test = File.open("category_assessment/practice_test.rb", "w")
-spec = File.open("category_assessment/spec.rb", "w")
-solution = File.open("category_assessment/solution.rb", "w")
+Dir.mkdir("category_assessment/lib")
+Dir.mkdir("category_assessment/spec")
+Dir.mkdir("category_assessment/solution")
+practice_test = File.open("category_assessment/lib/practice_test.rb", "w")
+spec = File.open("category_assessment/spec/practice_test_spec.rb", "w")
+solution = File.open("category_assessment/solution/solution.rb", "w")
+gemfile = File.open("category_assessment/Gemfile", "w")
+rspec = File.open("category_assessment/.rspec", "w")
 
 # require rspec and the practice_test in the spec
-spec << "require 'rspec'" << "\n"
-spec << "require_relative 'practice_test'" << "\n"
+spec << "gem 'rspec'" << "\n"
+spec << "require 'practice_test'" << "\n" << "\n"
+
+# .rspec file add formatting and color for better readability.
+rspec << "--format documentation" << "\n"
+rspec << "--color" << "\n"
+
+# Add rspec, byebug, and colorize gems to Gemfile
+gemfile << "source 'https://rubygems.org'" << "\n"
+gemfile << "gem 'rspec'" << "\n"
+gemfile << "gem 'byebug'" << "\n"
+gemfile << "gem 'colorize'" << "\n"
 
 # loop through master tests and add text to the new files
 master.each do |test|

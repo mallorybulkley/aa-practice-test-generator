@@ -71,13 +71,18 @@ practice_test = File.open("practice_assessment/lib/practice_test.rb", "w")
 spec = File.open("practice_assessment/spec/spec.rb", "w")
 solution = File.open("practice_assessment/solution/solution.rb", "w")
 gemfile = File.open("practice_assessment/Gemfile", "w")
+rspec = File.open("practice_assessment/.rspec", "w")
 
 # Copy README into practice directory
 FileUtils.cp("./resources/README.md", "./practice_assessment/")
 
 # Require rspec and the practice_test in the spec
-spec << "require 'rspec'" << "\n"
-spec << "require_relative 'practice_test'" << "\n"
+spec << "gem 'rspec', '~> 3.1.0'" << "\n"
+spec << "require 'practice_test'" << "\n"
+
+# .rspec file add formatting and color for better readability.
+rspec << "--format documentation" << "\n"
+rspec << "--color" << "\n"
 
 # Add rspec, byebug, and colorize gems to Gemfile
 gemfile << "source 'https://rubygems.org'" << "\n"
