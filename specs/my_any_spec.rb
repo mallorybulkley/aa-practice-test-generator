@@ -3,7 +3,7 @@ describe 'my_any' do
 
   it "should use NOT use built-in #any? method" do
     expect(arr).not_to receive(:any?)
-    arr.my_all? { |num| num > 0 }
+    arr.my_any? { |num| num > 0 }
   end
 
   it "returns true if any number matches the block" do
