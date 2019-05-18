@@ -1,6 +1,6 @@
 
 def digital_root(num)
-  while num > 10
+  while num >= 10
     num = digital_root_step(num)
   end
 
@@ -29,7 +29,7 @@ def digital_root(num)
 
   digit_sum = digits.inject(&:+)
 
-  digit_sum > 10 ? digital_root(digit_sum) : digit_sum
+  digit_sum >= 10 ? digital_root(digit_sum) : digit_sum
 end
 
 # Magical one-line solution
