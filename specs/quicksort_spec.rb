@@ -1,5 +1,6 @@
 describe "my_quick_sort" do
   let(:array) { [1, 2, 3, 4, 5, 6, 7].shuffle }
+  let(:sorted) { [1, 2, 3, 4, 5, 6, 7] }
 
   it "works with an empty array" do 
     expect([].my_quick_sort).to eq([])
@@ -10,7 +11,7 @@ describe "my_quick_sort" do
   end
 
   it "sorts numbers" do
-    expect(array.my_quick_sort).to eq(array.sort)
+    expect(array.my_quick_sort).to eq(sorted)
   end
 
   it "sorts arrays with duplicates" do
