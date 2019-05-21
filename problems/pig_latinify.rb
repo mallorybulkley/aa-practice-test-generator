@@ -10,6 +10,6 @@
 # 'apple' => 'appleay'
 # 'pearl' => 'earlpay'
 # 'quick' => 'ickquay'
-
 def pig_latinify(sentence)
+  
 end

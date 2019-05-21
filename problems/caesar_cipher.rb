@@ -7,7 +7,6 @@
 #
 # To get an array of letters "a" to "z", you may use `("a".."z").to_a`. To find
 # the position of a letter in the array, you may use `Array#find_index`.
-
 def caesar_cipher(str, shift)
 
 end

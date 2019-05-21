@@ -5,7 +5,6 @@
 # Example:
 # jumble_sort("hello") => "ehllo"
 # jumble_sort("hello", ['o', 'l', 'h', 'e']) => 'ollhe'
-
 def jumble_sort(str, alphabet = nil)
   alphabet ||= ('a'..'z').to_a
 

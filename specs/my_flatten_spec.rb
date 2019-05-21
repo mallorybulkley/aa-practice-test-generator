@@ -1,5 +1,4 @@
 describe "my_flatten" do
-
   it "should NOT use built-in ruby #flatten method" do
     arr = [1, 2, 3, [4, [5, 6]], [[[7]], 8]]
     expect(arr).not_to receive(:flatten)
@@ -13,7 +12,6 @@ describe "my_flatten" do
 end
 
 describe "my_controlled_flatten" do
-
   it "should NOT use built-in ruby #flatten method" do
     arr = [1,[2,3], [4,[5]], [[6,[7]]]]
     expect(arr).not_to receive(:flatten)

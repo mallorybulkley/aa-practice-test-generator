@@ -9,7 +9,6 @@
 #  [3, 1, 2],
 #  [3, 2, 1]
 # ]
-
 def permutations(array)
 
 end

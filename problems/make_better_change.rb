@@ -9,7 +9,6 @@
 # of each denomination.
 
 # make_better_change(24, [10,7,1]) should return [10,7,7]
-
 def make_better_change(value, coins)
 
 end

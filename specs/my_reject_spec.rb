@@ -1,5 +1,4 @@
 describe 'my_reject' do
-
   let(:arr) { [1, 2, 3] }
 
   it "should NOT use built-in #reject method" do
@@ -15,5 +14,4 @@ describe 'my_reject' do
   it 'It returns all elements if no elements match the block' do
     expect(arr.my_reject { |num| num == 4 }).to eq([1,2,3])
   end
-
 end

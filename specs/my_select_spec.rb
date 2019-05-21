@@ -1,5 +1,4 @@
 describe 'my_select' do
-
   let(:arr) { [1, 2, 3] }
 
   it "should NOT use built-in #select method" do
@@ -15,5 +14,4 @@ describe 'my_select' do
   it 'It returns an empty array if there are no matches' do
     expect(arr.my_select { |num| num == 4 }).to eq([])
   end
-
 end

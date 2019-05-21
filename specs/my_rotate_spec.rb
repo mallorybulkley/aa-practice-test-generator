@@ -22,5 +22,4 @@ describe "my_rotate" do
   it "Rotates the elements correctly for a large argument" do
     expect(arr.my_rotate(15)).to eq(["d", "a", "b", "c"])
   end
-
 end

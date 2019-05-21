@@ -2,7 +2,6 @@
 # duplicate elements. The keys are the duplicate elements; the values are
 # arrays of their indices in ascending order, e.g.
 # [1, 3, 4, 3, 0, 3, 0].dups => { 3 => [1, 3, 5], 0 => [4, 6] }
-
 class Array
   def dups
 

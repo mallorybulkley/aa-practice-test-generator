@@ -22,5 +22,4 @@ describe "my_zip" do
     expect([1, 2].my_zip(arr1, arr2, arr3, arr4)).to eq([[1, 4, 7, 10, 13], [2, 5, 8, 11, 14]])
     expect([].my_zip(arr1, arr2, arr3, arr4)).to eq([])
   end
-
 end

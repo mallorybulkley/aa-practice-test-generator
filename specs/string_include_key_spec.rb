@@ -18,5 +18,4 @@ describe "string_include_key" do
   it "returns false if the string doesn't contain the key" do
     expect(string_include_key?("db", "abc")).to eq(false)
   end
-
 end

@@ -1,4 +1,3 @@
-
 def digital_root(num)
   while num >= 10
     num = digital_root_step(num)

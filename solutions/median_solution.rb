@@ -1,5 +1,4 @@
 class Array
-
   def median
     return nil if empty?
     sorted = self.sort
@@ -8,6 +7,5 @@ class Array
     else
       (sorted[length / 2] + sorted[length / 2 - 1]).fdiv(2)
     end
-  end
-  
+  end  
 end

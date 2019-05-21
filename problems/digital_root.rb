@@ -5,7 +5,6 @@
 #
 # You may wish to use a helper function, `digital_root_step(num)` which performs
 # one step of the process.
-
 def digital_root(num)
 
 end

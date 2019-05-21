@@ -2,7 +2,6 @@
 # place eight queens on a chess board such that no two queens are in
 # the row, column, or diagonal. A skeleton for a possible solution is 
 # provided. Feel free to create your own solution from scratch.
-
 class EightQueens
   attr_accessor :rows, :diags1, :diags2
 

@@ -1,4 +1,3 @@
-
 class Array
   def two_sum
     pairs = []
