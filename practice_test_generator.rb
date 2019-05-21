@@ -1,3 +1,4 @@
+require 'byebug'
 require 'csv'
 require 'colorize'
 require 'fileutils'
@@ -7,15 +8,15 @@ system("clear")
 puts "I am generating a practice assessment that will be saved"
 puts "as 'practice_assessment/' in your current directory"
 
-# Read in csv with test info
-tests = CSV.read(
+# Read in csv with problem info
+problems = CSV.read(
           'resources/list.csv', 
           headers: true, 
           header_converters: :symbol, 
           converters: :all
         )
 
-# Define number of each category test 
+# Define number of each category problem 
 categories = {
   recursion: 2,
   array: 1,
@@ -24,44 +25,30 @@ categories = {
   sort: 1
 }
 
-# Grab appropriate tests for each category
+# Grab appropriate problems for each category
 master = []
-enumerables = []
 omit_problems = ['permutations',
                  'subsets',
                  'eight_queens',
-                 'make_better_change',
-                 'my_each',
-                 'my_all',
-                 'my_any',
-                 'my_join',
-                 'my_reject',
-                 'my_select'
+                 'make_better_change'
                 ]
 
 categories.each do |category, num|
   problems_in_category = []
-  tests.each do |test|
-    if category.to_s == test[1]
-      if !omit_problems.include?(test[0])
-        problems_in_category << test
-      end
-      
-      if category.to_s == 'enumerable' && omit_problems.include?(test[0])
-        enumerables << test
-      end
-    end
+  problems.each do |problem| 
+    problems_in_category << problem if category.to_s == problem[1]
+  end
+
+  if category == :enumerable 
+    my_each = problems_in_category.find { |el| el[0] === 'my_each' }
+    master << my_each
+    problems_in_category.delete(my_each)
   end
 
   master.concat(problems_in_category.sample(num))
-  if category == :enumerable 
-    master.push(enumerables.find { |el| el[0] === 'my_each' })
-    enumerables.select{ |el| el[0] === 'my_each' }
-    master.concat(enumerables.sample(1))
-  end
 end
 
-# Create new test, spec and solution files
+# Create new problem, spec and solution files
 FileUtils.rm_r("practice_assessment") if File.directory?("practice_assessment")
 Dir.mkdir("practice_assessment")
 Dir.mkdir("practice_assessment/lib")
@@ -90,11 +77,11 @@ gemfile << "gem 'rspec'" << "\n"
 gemfile << "gem 'byebug'" << "\n"
 gemfile << "gem 'colorize'" << "\n"
 
-# Loop through master tests and add text to the new files
-master.each do |test|
-  practice_test << File.read(test[2]) << "\n"
-  spec << File.read(test[3]) << "\n"
-  solution << File.read(test[4]) << "\n"
+# Loop through master problems and add text to the new files
+master.each do |problem|
+  practice_test << File.read(problem[2]) << "\n"
+  spec << File.read(problem[3]) << "\n"
+  solution << File.read(problem[4]) << "\n"
 end
 
 # Close the files that were just created
