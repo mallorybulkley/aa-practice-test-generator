@@ -1,4 +1,3 @@
-require 'byebug'
 require 'csv'
 require 'colorize'
 require 'fileutils'
@@ -39,6 +38,9 @@ categories.each do |category, num|
     problems_in_category << problem if category.to_s == problem[1]
   end
 
+  # my_each should be on every test, so if the category is enumerable we add
+  # it in here, delete it, and then lower will add a random problem from 
+  # remaining enumerables
   if category == :enumerable 
     my_each = problems_in_category.find { |el| el[0] === 'my_each' }
     master << my_each
@@ -48,12 +50,16 @@ categories.each do |category, num|
   master.concat(problems_in_category.sample(num))
 end
 
-# Create new problem, spec and solution files
+# Remove old practice assessment if it exists
 FileUtils.rm_r("practice_assessment") if File.directory?("practice_assessment")
+
+# Create relevant directories for practice assessment
 Dir.mkdir("practice_assessment")
 Dir.mkdir("practice_assessment/lib")
 Dir.mkdir("practice_assessment/spec")
 Dir.mkdir("practice_assessment/solution")
+
+# Create new problem, spec and solution files
 practice_test = File.open("practice_assessment/lib/practice_test.rb", "w")
 spec = File.open("practice_assessment/spec/practice_test_spec.rb", "w")
 solution = File.open("practice_assessment/solution/solution.rb", "w")
