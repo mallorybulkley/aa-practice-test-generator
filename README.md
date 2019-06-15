@@ -1,4 +1,4 @@
-# a/A Practice Test Generator
+# a/A A01 Practice Test Generator
 
 This is a practice test generator to prepare for A01, your first assessment at App Academy. This repo is forked from [Mallory Bulkley](https://github.com/mallorybulkley), an App Academy alum who created this when she was a student. The purpose of this tool is to allow you to get comfortable with the types of problems that could pop up on an assessment. Note that the purpose is **NOT TO MEMORIZE SOLUTIONS** - the problems included in this generator are _not_ an exhaustive list of what could show up on the assessment. Choosing to memorize solutions without understanding them may get you by in the short-term, but will never be worth it in the long run. Practice thinking and struggling through these problems so that you are agile and prepared for anything come assessment day.
 
