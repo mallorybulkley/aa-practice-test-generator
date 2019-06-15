@@ -26,11 +26,6 @@ categories = {
 
 # Grab appropriate problems for each category
 master = []
-omit_problems = ['permutations',
-                 'subsets',
-                 'eight_queens',
-                 'make_better_change'
-                ]
 
 categories.each do |category, num|
   problems_in_category = []
@@ -42,9 +37,14 @@ categories.each do |category, num|
   # it in here, delete it, and then lower will add a random problem from 
   # remaining enumerables
   if category == :enumerable 
-    my_each = problems_in_category.find { |el| el[0] === 'my_each' }
+    my_each = problems_in_category.find { |el| el[0] == 'my_each' }
     master << my_each
     problems_in_category.delete(my_each)
+  end
+
+  if category == :string
+    pig_latinify = problems_in_category.find { |el| el[0] == 'pig_latinify' }
+    problems_in_category.delete(pig_latinify)
   end
 
   master.concat(problems_in_category.sample(num))
