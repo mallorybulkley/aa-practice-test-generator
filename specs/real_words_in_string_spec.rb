@@ -1,4 +1,4 @@
-describe "real_words_in_string" do
+describe "String#real_words_in_string" do
   it "finds a simple word" do
     words = "asdfcatqwer".real_words_in_string(["cat", "car"])
     expect(words).to eq(["cat"])

@@ -1,4 +1,4 @@
-describe "#symmetric_substrings" do
+describe "String#symmetric_substrings" do
   it "handles a simple example" do
     expect("aba".symmetric_substrings).to match_array(["aba"])
   end

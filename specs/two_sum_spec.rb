@@ -1,4 +1,4 @@
-describe "#two_sum" do
+describe "Array#two_sum" do
   it "returns positions of pairs of numbers that add to zero" do
     expect([5, 1, -7, -5].two_sum).to eq([[0, 3]])
   end

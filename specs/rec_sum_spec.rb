@@ -1,4 +1,4 @@
-describe "#rec_sum" do
+describe "rec_sum" do
   it "returns the sum of all elements in an array" do
     arr = [1,2,3,4]
     expect(rec_sum(arr)).to eq(10)
