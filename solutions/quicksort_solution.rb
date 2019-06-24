@@ -1,6 +1,8 @@
-# Monkey patch the array class quick sort method. The method should be able to 
-# accept a block.
 class Array
+  # Define a method `Array#my_quick_sort` that implements 
+  # the quick sort method. 
+  # The method should be able to accept a block.
+
   def my_quick_sort(&prc)
     prc ||= proc {|a, b| a<=>b}
     return self if size < 2

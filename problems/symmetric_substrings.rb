@@ -1,8 +1,10 @@
 class String
-  # Write a String#symmetric_substrings method that returns an array of substrings
-  # that are palindromes, e.g. "cool".symmetric_substrings => ["oo"]
+  # Define a method `symmetric_substrings` that returns 
+  # an array of substrings that are palindromes.
   # Only include substrings of length > 1.
+
+  # example: "cool".symmetric_substrings => ["oo"]
+
   def symmetric_substrings
-    
   end
 end
